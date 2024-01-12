@@ -1,10 +1,21 @@
 <nav>
   <ul>
     <li>
-      <a routerLink="/">HOME</a>
+      <a
+        routerLink="/"
+        routerLinkActive="activate"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        HOME
+      </a>
     </li>
     <li>
-      <a routerLink="/portifolio">PORTIFOLIO</a>
+      <a
+        routerLink="/portifolio"
+        routerLinkActive="activate"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >PORTIFOLIO</a
+      >
     </li>
   </ul>
 </nav>
