@@ -15,6 +15,8 @@ export class PortifolioComponent implements OnInit{
   constructor(private route: ActivatedRoute, private navegador: Router) {
 
     console.log("Parametros: ", this.route.snapshot.paramMap)
+    console.log("Parametros filhos: ", this.route.snapshot.firstChild?.paramMap)
+
     console.log("Query: ", this.route.snapshot.queryParamMap)
 
   }
