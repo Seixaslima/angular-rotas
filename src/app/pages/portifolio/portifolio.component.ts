@@ -14,14 +14,14 @@ export class PortifolioComponent implements OnInit{
 
   constructor(private route: ActivatedRoute, private navegador: Router) {
 
-    console.log(this.route.snapshot.paramMap)
-    console.log(this.route.snapshot.queryParamMap)
+    console.log("Parametros: ", this.route.snapshot.paramMap)
+    console.log("Query: ", this.route.snapshot.queryParamMap)
 
   }
   ngOnInit(): void {
-    setInterval(() => {
-      this.navegador.navigate([''])
-    }, 5000)
+    // setInterval(() => {
+    //   this.navegador.navigate([''])
+    // }, 5000)
   }
 
 }

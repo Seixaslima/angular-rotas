@@ -5,7 +5,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
   {path:'', component: IndexComponent, pathMatch:"full"},
-  {path:'portifolio/:id', component: PortifolioComponent },
-  {path:'portfolio', redirectTo: 'portifolio/0' },
+  {path:'portifolio', component: PortifolioComponent, children: [
+    {path:':id', component: PortifolioComponent },
+    {path:':id/:user', component: PortifolioComponent }
+  ] },
+  {path:'portfolio', redirectTo: 'portifolio' },
   {path:'**', component: NotFoundComponent}
 ];
