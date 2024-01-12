@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -11,14 +9,19 @@ import { map, switchMap } from 'rxjs/operators';
   templateUrl: './portifolio.component.html',
   styleUrl: './portifolio.component.css'
 })
-export class PortifolioComponent {
+export class PortifolioComponent implements OnInit{
   id: string = ""
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private navegador: Router) {
 
     console.log(this.route.snapshot.paramMap)
     console.log(this.route.snapshot.queryParamMap)
 
+  }
+  ngOnInit(): void {
+    setInterval(() => {
+      this.navegador.navigate([''])
+    }, 5000)
   }
 
 }
