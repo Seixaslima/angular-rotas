@@ -12,9 +12,12 @@ import { map, switchMap } from 'rxjs/operators';
   styleUrl: './portifolio.component.css'
 })
 export class PortifolioComponent {
+  id: string = ""
 
   constructor(private route: ActivatedRoute) {
-    console.log(this.route.snapshot.paramMap.get('id'))
+
+    console.log(this.route.snapshot.paramMap)
+    console.log(this.route.snapshot.queryParamMap)
 
   }
 
